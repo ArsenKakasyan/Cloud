@@ -1,4 +1,4 @@
-const SET_USER = "SET_USER" //actions
+const SET_USER = "SET_USER" //actions types
 const LOGOUT = "LOGOUT"
 
 const defaultState = {

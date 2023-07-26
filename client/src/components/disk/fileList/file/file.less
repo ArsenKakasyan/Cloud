@@ -16,6 +16,17 @@
         justify-self: center;
     }
 
+    &_name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+    }
+    
+    &:hover &_name {
+        text-overflow: clip;
+    }
+
     &_date{
         grid-column-start: 5;
         justify-self: center;
@@ -24,5 +35,50 @@
     &_size{
         grid-column-start: 6;
         justify-self: center;
+    }
+
+    &_btn_file_download {
+        display: none;
+    }
+
+    &_btn_file_delete {
+        display: none;
+    }
+
+    &:hover &_date {
+        grid-column-start: 3;
+    }
+
+    &:hover &_size {
+        grid-column-start: 4;
+    }
+    
+    &:hover &_btn_file_download {
+        grid-column-start: 5;
+        display: block;
+    }
+
+    &:hover &_btn_file_delete {
+        grid-column-start: 6;
+        display: block;
+    }   
+}
+
+.file-plate {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_img {
+        height: 100px;
+        width: 100px;
+    }
+    &_btns {
+        display: none;
+    }
+    &:hover &_btns {
+        display: flex;
     }
 }
